@@ -56,8 +56,9 @@ public class HazmatSuitItem extends ArmorItem {
         var root = models.getModelPart(ArmorTestClient.HAZMAT_SUIT_MAIN_LAYER);
         if (slot == EquipmentSlot.FEET)
             return new FullArmorModel(feet, slot);
-        else
+        } else {
             return new FullArmorModel(root, slot);
+        }
     }
 
     @Environment(EnvType.CLIENT)

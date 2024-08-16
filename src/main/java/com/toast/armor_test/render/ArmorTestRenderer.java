@@ -39,10 +39,12 @@ public class ArmorTestRenderer {
             HazmatSuitItem armor = (HazmatSuitItem) stack.getItem();
             var model = armor.getArmorModel();
             var texture = armor.getArmorTexture(stack, slot);
-            contextModel.copyBipedStateTo(model);
+            boolean shouldRender = (!ArmorTestClient.isFiguraLoaded || FiguraCompat.renderArmorPart((PlayerEntity) entity, slot));
 
-            renderPart(matrices, vertexConsumers, light, stack, model, texture);
-
+            if (shouldRender) {
+                contextModel.copyBipedStateTo(model);
+                renderPart(matrices, vertexConsumers, light, stack, model, texture);
+            }
         };
         ArmorRenderer.register(renderer, HAZMAT_SUIT.toArray(new Item[0]));
     }

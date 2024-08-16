@@ -6,7 +6,6 @@ import net.minecraft.client.render.entity.model.*;
 import net.minecraft.client.util.math.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.decoration.ArmorStandEntity;
 
 public class FullArmorModel extends BipedEntityModel<LivingEntity> {
     final EquipmentSlot slot;

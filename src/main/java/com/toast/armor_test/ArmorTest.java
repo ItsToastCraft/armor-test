@@ -2,7 +2,6 @@ package com.toast.armor_test;
 
 import com.toast.armor_test.item.ArmorTestItems;
 import net.fabricmc.api.ModInitializer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,6 +18,5 @@ public class ArmorTest implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		ArmorTestItems.registerItems();
-		LOGGER.info("Hello Fabric world!");
 	}
 }
