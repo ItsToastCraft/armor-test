@@ -1,5 +1,7 @@
 package com.toast.armor_test.render;
 
+import com.toast.armor_test.ArmorTestClient;
+import com.toast.armor_test.compat.FiguraCompat;
 import com.toast.armor_test.item.ArmorTestItems;
 import com.toast.armor_test.item.HazmatSuitItem;
 import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
@@ -8,8 +10,6 @@ import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.entity.model.BipedEntityModel;
-import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerEntity;

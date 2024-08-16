@@ -1,16 +1,12 @@
 package com.toast.armor_test.item;
 
-import com.toast.armor_test.ArmorTest;
 import com.toast.armor_test.ArmorTestClient;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.render.entity.*;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
-import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
@@ -54,7 +50,7 @@ public class HazmatSuitItem extends ArmorItem {
         var models = MinecraftClient.getInstance().getEntityModelLoader();
         var feet = models.getModelPart(ArmorTestClient.HAZMAT_SUIT_FEET_LAYER);
         var root = models.getModelPart(ArmorTestClient.HAZMAT_SUIT_MAIN_LAYER);
-        if (slot == EquipmentSlot.FEET)
+        if (slot == EquipmentSlot.FEET) {
             return new FullArmorModel(feet, slot);
         } else {
             return new FullArmorModel(root, slot);
